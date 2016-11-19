@@ -89,11 +89,11 @@ void TSPSolver::runSequential()
 
 void TSPSolver::show() const
 {
-	cout << "       Best route: ";
+	cout << "Best route: ";
 	for (int i = 0; i < n + 1; i++)
 		cout << bestRoute.tab[i] << " ";
 
-	cout << endl << "       Cost: " << bestRoute.cost << endl;
+	cout << endl << "Cost: " << bestRoute.cost << endl;
 }
 
 void TSPSolver::solve(const bool seq = false)
