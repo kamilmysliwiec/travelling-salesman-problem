@@ -5,27 +5,25 @@
 
 int main()
 {
-	cin.get();
-	cin.get();
 	try
 	{
 		TSPSolver tsp("we11.txt"); 
 
 		double time = omp_get_wtime();
 
-		cout << "       Parallel: " << endl;
+		cout << "Parallel: " << endl;
 		tsp.solve(false);
 		tsp.show();
 
-		cout << "       " << omp_get_wtime() - time << "s" << endl << endl;
+		cout << omp_get_wtime() - time << "s" << endl << endl;
 		tsp.restart();
 
 		time = omp_get_wtime(); 
-		cout << "       Sequential: " << endl;
+		cout << "Sequential: " << endl;
 		tsp.solve(true);
 		tsp.show();
 
-		cout << "       " << omp_get_wtime() - time << "s" << endl;
+		cout << omp_get_wtime() - time << "s" << endl;
 	}
 	catch (exception &e)
 	{
